@@ -2,6 +2,12 @@
 
 In this POC guide, we'll build an simple API gateway application. The API will contain three sub-domains that we'll call "Company", "Department" and "Employee" contexts. The gateway will behave like a reverse proxy that routes incoming HTTP requests to the mentioned downstream services.
 
+## Introducing Ocelot
+
+[Ocelot](https://ocelot.readthedocs.io/en/latest/introduction/bigpicture.html) is an open source framework used for building .NET core API gateways, the project is aimed at people using .NET Core to build applications designed with microservices or SOA architectures. Ocelot provides an easy way to write a mapping file (ocelot.json) that could be used to route incoming HTTP requests to the appropriate downstream services.
+
+## POC
+
 Test the APIs by running each of them and issuing a GET request against the following urls:
 * Department: [http://localhost:51260/api/department](http://localhost:51260/api/department)
 * Employee: [http://localhost:51261/api/employee](http://localhost:51261/api/employee)
