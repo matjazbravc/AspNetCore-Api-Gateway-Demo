@@ -4,7 +4,9 @@ In this POC guide, we'll build an simple API gateway application. The API will c
 
 ## Introducing Ocelot
 
-[Ocelot](https://ocelot.readthedocs.io/en/latest/introduction/bigpicture.html) is an open source framework used for building .NET core API gateways, the project is aimed at people using .NET Core to build applications designed with microservices or SOA architectures. Ocelot provides an easy way to write a mapping file (ocelot.json) that could be used to route incoming HTTP requests to the appropriate downstream services.
+Ocelot is an open source framework used for building .NET core API gateways, the project is aimed at people using .NET Core to build applications designed with microservices or SOA architectures. It provides an easy way to write a mapping file (ocelot.json) that could be used to route incoming HTTP requests to the appropriate downstream services.
+
+Read more about Ocelot [here](https://ocelot.readthedocs.io/en/latest/introduction/bigpicture.html).
 
 ## POC
 
