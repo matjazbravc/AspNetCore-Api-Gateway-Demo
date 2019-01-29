@@ -1,0 +1,96 @@
+﻿{
+  "ReRoutes": [
+    // Company Routes
+    {
+      "DownstreamPathTemplate": "/api/company/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51262
+        }
+      ],
+      "UpstreamPathTemplate": "/api/company/",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/company/getbyid/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51262
+        }
+      ],
+      "UpstreamPathTemplate": "/api/company/getbyid/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "company-profile"
+    },
+    // Employee Routes
+    {
+      "DownstreamPathTemplate": "/api/employee/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51261
+        }
+      ],
+      "UpstreamPathTemplate": "/api/employee/",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee/getbycompanyid/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51261
+        }
+      ],
+      "UpstreamPathTemplate": "/api/employee/getbycompanyid/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "company-employees"
+    },
+    // Department Routes
+    {
+      "DownstreamPathTemplate": "/api/department/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51260
+        }
+      ],
+      "UpstreamPathTemplate": "/api/department/",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/department/getbyid/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51260
+        }
+      ],
+      "UpstreamPathTemplate": "/api/department/getbyid/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "company-departments"
+    }
+  ],
+  // Simple Response aggregation configuration
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "company-employees",
+        "company-profile"
+      ],
+      "UpstreamPathTemplate": "/api/company-employees/{id}"
+    }
+  ],
+  // Ocelot configuration
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:51263"
+  }
+}
