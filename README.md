@@ -15,7 +15,6 @@ The first thing that we have to do is configure the **ocelot.json** file and add
 ```json
 {
   "ReRoutes": [
-    // Company Routes
     {
       "DownstreamPathTemplate": "/api/company/",
       "DownstreamScheme": "http",
@@ -41,7 +40,6 @@ The first thing that we have to do is configure the **ocelot.json** file and add
       "UpstreamHttpMethod": [ "GET" ],
       "Key": "company-profile"
     },
-    // Employee Routes
     {
       "DownstreamPathTemplate": "/api/employee/",
       "DownstreamScheme": "http",
@@ -67,7 +65,6 @@ The first thing that we have to do is configure the **ocelot.json** file and add
       "UpstreamHttpMethod": [ "GET" ],
       "Key": "company-employees"
     },
-    // Department Routes
     {
       "DownstreamPathTemplate": "/api/department/",
       "DownstreamScheme": "http",
@@ -94,7 +91,6 @@ The first thing that we have to do is configure the **ocelot.json** file and add
       "Key": "company-departments"
     }
   ],
-  // Simple Response aggregation configuration
   "Aggregates": [
     {
       "ReRouteKeys": [
@@ -104,7 +100,6 @@ The first thing that we have to do is configure the **ocelot.json** file and add
       "UpstreamPathTemplate": "/api/company-employees/{id}"
     }
   ],
-  // Ocelot configuration
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:51263"
   }
