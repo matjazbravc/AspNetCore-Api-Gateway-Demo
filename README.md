@@ -8,7 +8,7 @@ Ocelot is an open source framework used for building .NET core API gateways, the
 
 Read more about Ocelot [here](https://ocelot.readthedocs.io/en/latest/introduction/bigpicture.html).
 
-## POC
+## Getting Started
 
 Test the APIs by running each of them and issuing a GET request against the following urls:
 * Department: [http://localhost:51260/api/department](http://localhost:51260/api/department)
@@ -259,5 +259,5 @@ You can test the output of the individual endpoint re-routes and aggregated rout
 
 ## Technologies and frameworks used:
 - ASP.NET MVC Core 2.2
-- Ocelot
+- [Ocelot](https://ocelot.readthedocs.io/en/latest/introduction/gettingstarted.html)
 
