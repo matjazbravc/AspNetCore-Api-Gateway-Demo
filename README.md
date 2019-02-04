@@ -257,7 +257,13 @@ You can test the output of the individual endpoint re-routes and aggregated rout
 - [Visual Studio](https://www.visualstudio.com/vs/community) 2017 15.9 or greater
 - [.NET Core SDK 2.2.102](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 
-## Technologies and frameworks used:
+## Tags & Technologies
 - ASP.NET MVC Core 2.2
 - [Ocelot](https://ocelot.readthedocs.io/en/latest/introduction/gettingstarted.html)
 
+Enjoy!
+
+## Licence
+
+Licenced under [MIT](http://opensource.org/licenses/mit-license.php).
+Developed by [Matjaž Bravc](https://si.linkedin.com/in/matjazbravc)
